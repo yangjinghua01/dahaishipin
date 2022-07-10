@@ -1,4 +1,6 @@
+import 'package:dahaishipin/UI/seachbar.dart';
 import 'package:dahaishipin/UI/tabbarui.dart';
+import 'package:dahaishipin/pages/Home/pages/movies/movies.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -16,9 +18,11 @@ class _HomeScreenState extends State<HomeScreen> {
       length: 6,
       child: Scaffold(
         appBar: AppBar(
-          title: Text(
-            "用一部电影来形容你的2019",
-          ),
+          title: SeachBar((){
+            Navigator.pushNamed(context, "seach");
+          },(){
+            Navigator.pushNamed(context, "filter");
+          }),
           backgroundColor: Colors.green,
           bottom: TabBar(
             isScrollable: true,
@@ -58,9 +62,7 @@ class _HomeScreenState extends State<HomeScreen> {
         ),
         body: TabBarView(
           children: <Widget>[
-            Center(
-              child: Text("data0"),
-            ),
+            Movies(),
             Center(
               child: Text("data1"),
             ),

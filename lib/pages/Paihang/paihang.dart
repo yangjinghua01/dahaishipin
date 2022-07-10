@@ -1,3 +1,4 @@
+import 'package:dahaishipin/UI/fontmarquee.dart';
 import 'package:flutter/cupertino.dart';
 
 class Paihang extends StatelessWidget {
@@ -5,6 +6,6 @@ class Paihang extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(child: Text("排行"),);
+    return Container(child: FontMarquee(),);
   }
 }
