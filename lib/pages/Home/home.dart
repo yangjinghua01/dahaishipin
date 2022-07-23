@@ -1,6 +1,9 @@
 import 'package:dahaishipin/UI/seachbar.dart';
 import 'package:dahaishipin/UI/tabbarui.dart';
+import 'package:dahaishipin/pages/Home/pages/movies/historyseach.dart';
 import 'package:dahaishipin/pages/Home/pages/movies/movies.dart';
+import 'package:dahaishipin/pages/download/download.dart';
+import 'package:dahaishipin/pages/lookhistory/history.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -18,11 +21,17 @@ class _HomeScreenState extends State<HomeScreen> {
       length: 6,
       child: Scaffold(
         appBar: AppBar(
-          title: SeachBar((){
-            Navigator.pushNamed(context, "seach");
-          },(){
-            Navigator.pushNamed(context, "filter");
-          }),
+          title: SeachBar(
+          () {
+            Navigator.of(context).pushNamed(DeviceSearchPage.routeName);
+          },
+           () {
+             Navigator.of(context).pushNamed(HistoryPage.routeName);
+          },
+           () {
+             Navigator.of(context).pushNamed(DownLoadPage.routeName);
+           }
+           ),
           backgroundColor: Colors.green,
           bottom: TabBar(
             isScrollable: true,
