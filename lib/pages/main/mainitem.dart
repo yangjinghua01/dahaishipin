@@ -20,18 +20,18 @@ final List<BottomNavigationBarItem> items =[
   ),
   BottomNavigationBarItem(
       title: Text("排行"),
-      icon: Icon(Icons.star),
+      icon: Icon(Icons.upgrade),
   ),
   BottomNavigationBarItem(
     title: Text("找片"),
-    icon: Icon(Icons.star),
+    icon: Icon(Icons.voice_chat_rounded),
   ),
   BottomNavigationBarItem(
     title: Text("推广"),
-    icon: Icon(Icons.star),
+    icon: Icon(Icons.account_tree_sharp),
   ),
   BottomNavigationBarItem(
     title: Text("我的"),
-    icon: Icon(Icons.star),
+    icon: Icon(Icons.person),
   )
 ];

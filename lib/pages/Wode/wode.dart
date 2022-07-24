@@ -1,6 +1,8 @@
 import 'dart:ffi';
 
 import 'package:dahaishipin/pages/Wode/header.dart';
+import 'package:dahaishipin/pages/download/download.dart';
+import 'package:dahaishipin/pages/lookhistory/history.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -15,13 +17,13 @@ class Wode extends StatelessWidget {
         children: [
           UnLoginHeard(),
           buildListtitle("观看历史", Icons.update, () {
-            print(1243);
+            Navigator.of(context).pushNamed(HistoryPage.routeName);
           }),
           buildListtitle("我的收藏", Icons.favorite_outlined, () {
             print(1);
           }),
           buildListtitle("我的下载", Icons.cloud_download_outlined, () {
-            print(1);
+            Navigator.of(context).pushNamed(DownLoadPage.routeName);
           }),
           buildListtitle("上传视频", Icons.cloud_upload_outlined, () {
             print(1);
